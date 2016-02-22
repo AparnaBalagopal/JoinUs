@@ -1,21 +1,44 @@
-1.Yes,I have a Desktop
-2.OS : Windows 8.1 pro, RAM : 500 GB, Screen Resolution : 19.5
-3.Windows and Linux
+             programming question-1
 
-Social Links
-1. https://github.com/AparnaBalagopal/
-2.https://stackoverflow.com/users/5897115/aparna
-3.No Blog/Tumblr/Personal Website
-4.No Linkedin Account
+y = []
+for j in 1..1000
+        x = []
+        t = Random.rand(7...15)
+        for i in 1..t
+                s = (('a'..'z').to_a+('A'..'Z').to_a).shuffle.first(rand(1...8)).join
+                x = x<<s
+        end
+        x = x.join(" ")
+        x = x + "."
+        y = y<<x
+end
+y = y.join("\n")
 
-1./b : Matches the pattern if at the beginning of a line.
-/e : Matches the pattern if at the end of a line.
-/l : Uses search strings literally.
+File.open("file.txt", 'w') { |file| file.write(y) }
+file =File.open("file.txt","r")
+text = file.read
 
-2.Python Programming, JAVA
-3.I took 1 hour to install development environment and I hadn't done any automation on it.
+for k in 'a'..'z'
+        File.delete("word_#{k}.txt") if File.exist?("word_#{k}.txt")
+end
 
-Programming Languages
+words = text.split(/\W+/)
+words.each do |w|
+        File.open("word_#{w[0].downcase}.txt","a+") { |file| file.write(w + "\n") }
+end
 
-1. No
-2. Python Programming
+
+
+
+          programming quuestion-2
+
+
+require 'twitter'
+client = Twitter::REST::Client.new do |config|
+  config.consumer_key        = "consumer_key"
+  config.consumer_secret     = "consumer_secret"
+  config.access_token        = "2904850933-kSx6IqplP2d6qIL1lQMpyVTHdfDooXYlnUI4uzE"
+  config.access_token_secret = "ipOihJc2vfw0eXDR4AvAX9XBHyUddsnLTuzd1RxjMyyM5"
+end
+
+client.update("I'm tweeting with @gem")
