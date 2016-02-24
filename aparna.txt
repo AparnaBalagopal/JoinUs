@@ -1,20 +1,43 @@
-             programming question-1
+1.Yes,I have a Laptop
+2.OS : Windows 8.1 pro, RAM : 4 GB, Screen Resolution : 14
+3.Windows and Linux
 
-y = []
+Social Links
+1. https://github.com/Nishanth303
+2.https://stackoverflow.com/users/5897117/nishanth-n
+3.No Blog/Tumblr/Personal Website
+4.No Linkedin Account
+
+1./b : Matches the pattern if at the beginning of a line.
+/e : Matches the pattern if at the end of a line.
+/l : Uses search strings literally.
+
+2.Python Programming, JAVA
+3.I took Almost 1 hour to install development environment and I hadn't done any automation on it.
+
+Programming Languages
+
+1. No
+2. Python Programming
+
+3. Programming question-1
+
+
+a = []
 for j in 1..1000
         x = []
-        t = Random.rand(7...15)
-        for i in 1..t
-                s = (('a'..'z').to_a+('A'..'Z').to_a).shuffle.first(rand(1...8)).join
-                x = x<<s
+        y = Random.rand(7...15)
+        for i in 1..y
+                z = (('a'..'z').to_a+('A'..'Z').to_a).shuffle.first(rand(1...8)).join
+                x = x<<z
         end
         x = x.join(" ")
         x = x + "."
-        y = y<<x
+        a = a<<x
 end
-y = y.join("\n")
+a = a.join("\n")
 
-File.open("file.txt", 'w') { |file| file.write(y) }
+File.open("file.txt", 'w') { |file| file.write(a) }
 file =File.open("file.txt","r")
 text = file.read
 
@@ -30,8 +53,7 @@ end
 
 
 
-          programming quuestion-2
-
+4. programming question-2
 
 require 'twitter'
 client = Twitter::REST::Client.new do |config|
@@ -42,3 +64,13 @@ client = Twitter::REST::Client.new do |config|
 end
 
 client.update("I'm tweeting with @gem")
+
+
+
+
+
+
+
+
+
+
